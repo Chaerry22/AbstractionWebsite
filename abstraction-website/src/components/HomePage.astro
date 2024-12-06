@@ -5,6 +5,9 @@ import HPGrayDesign from '../assets/HPGrayDesign.png';
 import learnarrow from '../assets/learnarrow.png';
 import card1design from '../assets/card1design.png';
 import card2design from '../assets/card2design.png';
+import CodingCompetition from '../assets/CodingCompetition.png';
+import EventDesign from '../assets/EventDesign.png';
+import Footer from '../assets/Footer.png';
 
 ---
 <head>
@@ -69,11 +72,29 @@ import card2design from '../assets/card2design.png';
         <img id="card1design" src={card1design.src} alt="" fetchpriority="high" />
     </div>
 </div>
+<div class="event-container">
+    <div id="event-text">
+    <p id= "event-title">Most Recent Event</p>
+    <h2>Abstraction just hosted a coding competition where questions on Data Structures and Algorithms were asked. It was a great opportunity to practice skills for a future technical interview.</h2>
+    </div>
+    <img id="CodingCompetition" src={CodingCompetition.src} alt="" fetchpriority="high" />
+</div>
+<img id="EventDesign" src={EventDesign.src} alt="" fetchpriority="high" />
+<div class ="footer-container">
+    <img id="Footer" src={Footer.src} alt="" fetchpriority="high" />
+    <div id="footer-card-container">
+        <div id="footer-card">
+            <h2>Ready To Get Started?</h2>
+            <p>Sign Up</p>
+        </div>
+
+    </div>
+</div>
 
 <style>
-/* * {
+* {
     border: 1px solid blue !important;
-}*/
+}
 	#MainBackground {
 		position: absolute;
 		top: 2em; /* Adding the margin at the top */
@@ -280,36 +301,106 @@ import card2design from '../assets/card2design.png';
     .learnmore-container {
     display: flex; /* Enables flexbox layout */
     align-items: center; /* Vertically centers items */
-    gap: 0.5rem; /* Adds space between "Learn more" and the arrow */
-    margin-top: -1rem; /* Optional: Adjust spacing from other content */
+    gap: 0.5rem; 
+    margin-top: -1rem;
     height: 25px;
     }
 
     #learnarrow {
-    width: 20px; /* Adjust the size of the arrow */
+    width: 20px; 
     height: auto;
     }
 
     #card1design{
-    position: absolute; /* Enables absolute positioning */
-    bottom: 22px; /* Aligns the image to the bottom */
-    right: 29px; /* Aligns the image to the right */
-    margin: 0; /* Removes any extra margin */
-    transform: translate(10%, 10%); /* Optional: Adjust positioning slightly outside the edge */
-    z-index: 1; /* Optional: Ensures it appears above other content, if needed */
-    width: 300px; /* Adjust size as needed */
+    position: absolute; 
+    bottom: 22px; 
+    right: 29px; 
+    margin: 0; 
+    transform: translate(10%, 10%); 
+    z-index: 1; 
+    width: 300px; 
     height: auto;
     }
     #card2design{
-    position: absolute; /* Enables absolute positioning */
-    bottom: 19px; /* Aligns the image to the bottom */
-    right: 20px; /* Aligns the image to the right */
-    margin: 0; /* Removes any extra margin */
-    transform: translate(10%, 10%); /* Optional: Adjust positioning slightly outside the edge */
-    z-index: 1; /* Optional: Ensures it appears above other content, if needed */
-    width: 220px; /* Adjust size as needed */
+    position: absolute; 
+    bottom: 19px; 
+    right: 20px; 
+    margin: 0; 
+    transform: translate(10%, 10%); 
+    z-index: 1; 
+    width: 220px; 
     height: auto;
     }
+
+    /*Event*/
+
+     .event-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 8rem;
+    
+    box-sizing: border-box;
+    gap: 4rem;
+    }
+
+    #CodingCompetition{
+        width:600px;
+        height:auto;
+    }
+
+    #event-title{
+        color: #FF5B00;
+        font-family: "quasimoda", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size:20px;
+    }
+
+    #EventDesign{
+        width:800px;
+        height:auto;
+        z-index:-1;
+        flex-start: end;
+        margin-top:-25rem;
+        position: absolute; /* Enable absolute positioning */
+        right: -8rem;
+    }
+
+    .footer-container{
+        position: relative; /* Parent container positioning */
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center;
+        padding: 3rem;
+        
+    }
+
+    #Footer {
+        width: 87rem;
+        height: auto;
+        position: absolute; /* Place the image in the background */
+        z-index: -1;
+    }
+
+    #footer-card-container{
+        display: flex;
+        justify-content: space-around; /* Space out the columns evenly */
+        width: 100%; /* Full width */
+        padding: 2rem; /* Add padding for spacing */
+        z-index: 1; /* Ensure content is above the image */
+        position: relative;
+    }
+
+    .footer-card {
+    text-align: center; /* Center align the text in each column */
+    flex: 1; /* Ensure all columns are equal width */
+    padding: 1rem; /* Add padding for spacing */
+    color: white; /* Adjust text color for readability */
+}
 
 	@media screen and (max-height: 368px) {
 		#news {
