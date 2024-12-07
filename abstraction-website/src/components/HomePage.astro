@@ -26,7 +26,7 @@ import Footer from '../assets/Footer.png';
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div id="contact">
-            <a href="#contact">Contact Us</a>
+            <div id="contact-top">Sign Up</div>
             </div>
         </nav>
     </header>
@@ -85,16 +85,30 @@ import Footer from '../assets/Footer.png';
     <div id="footer-card-container">
         <div id="footer-card">
             <h2>Ready To Get Started?</h2>
-            <p>Sign Up</p>
+            <p id="signup">Sign Up</p>
         </div>
-
+        <div id="footer-card">
+            <h2>Stay Informed</h2>
+            <li><a id="footer-list" href="">Mailing List</a></li>
+            <li><a id="footer-list" href="">Instagram</a></li>
+        </div>
+        <div id="footer-card">
+            <h2>Find Us</h2>
+            <li><a id="footer-list" href="https://www.instagram.com/calvinabstraction/">Instagram</a></li>
+            <li><a id="footer-list" href="">GitHub</a></li>
+            <p id="email">abstraction@calvin.edu</p>
+        </div>
     </div>
 </div>
 
 <style>
+
+/*
 * {
     border: 1px solid blue !important;
 }
+*/
+
 	#MainBackground {
 		position: absolute;
 		top: 2em; /* Adding the margin at the top */
@@ -162,13 +176,24 @@ import Footer from '../assets/Footer.png';
     text-transform: uppercase;
     margin-right: auto;
     padding-left: 3rem;
-}
+    }
+
     #contact {
         margin-left: auto;
         padding-right:3rem;
         list-style: none;
         font-family: Helvetica, sans-serif;
         font-weight: 400;
+    }
+
+    #contact-top {
+        font-family: Helvetica, sans-serif;
+        font-size: 20px;
+        color: #2537B7;
+        text-align:center;
+        padding:0.5rem 2rem;
+        border-radius: 40px;
+        border:1px solid blue;
     }
 
     /* Main Content Styling */
@@ -359,13 +384,13 @@ import Footer from '../assets/Footer.png';
     }
 
     #EventDesign{
-        width:800px;
+        width:600px;
         height:auto;
         z-index:-1;
         flex-start: end;
         margin-top:-25rem;
         position: absolute; /* Enable absolute positioning */
-        right: -8rem;
+        right: 0;
     }
 
     .footer-container{
@@ -376,6 +401,7 @@ import Footer from '../assets/Footer.png';
         justify-content: center; /* Center content horizontally */
         align-items: center;
         padding: 3rem;
+        box-sizing: border-box;
         
     }
 
@@ -390,17 +416,54 @@ import Footer from '../assets/Footer.png';
         display: flex;
         justify-content: space-around; /* Space out the columns evenly */
         width: 100%; /* Full width */
-        padding: 2rem; /* Add padding for spacing */
+        padding: 6rem; /* Add padding for spacing */
         z-index: 1; /* Ensure content is above the image */
         position: relative;
     }
 
     .footer-card {
-    text-align: center; /* Center align the text in each column */
-    flex: 1; /* Ensure all columns are equal width */
-    padding: 1rem; /* Add padding for spacing */
-    color: white; /* Adjust text color for readability */
-}
+    text-align: center; 
+    flex: 1; 
+    padding: 2rem; 
+    color: white; 
+    
+
+    }
+
+    .footer-container #footer-card li a {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    color: #2537B7;
+    text-decoration: none;
+    list-style: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth effect */
+    }
+
+    #footer-card li {
+    list-style: none;
+    margin: 2rem 0;
+    }
+
+   .footer-container #footer-card li a:hover {
+    color: #7F7FE2; 
+    }
+
+    #email{
+        font-family: Helvetica, sans-serif;
+        font-size: 20px;
+        color: #2537B7;
+    }
+
+    #signup {
+        font-family: Helvetica, sans-serif;
+        font-size: 20px;
+        color: #2537B7;
+        text-align:center;
+        padding:1rem;
+        margin:3rem 2rem;
+        border-radius: 40px;
+        border:1px solid blue;
+    }
 
 	@media screen and (max-height: 368px) {
 		#news {
