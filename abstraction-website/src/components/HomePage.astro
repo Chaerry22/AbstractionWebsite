@@ -26,7 +26,8 @@ import Footer from '../assets/Footer.png';
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div id="contact">
-            <div id="contact-top">Sign Up</div>
+            <div id="signup-top">Sign Up</div>
+            <div id="login">Login</div>
             </div>
         </nav>
     </header>
@@ -85,7 +86,7 @@ import Footer from '../assets/Footer.png';
     <div id="footer-card-container">
         <div id="footer-card">
             <h2>Ready To Get Started?</h2>
-            <p id="signup">Sign Up</p>
+            <button id="signup-bottom">Sign Up</button>
         </div>
         <div id="footer-card">
             <h2>Stay Informed</h2>
@@ -100,6 +101,29 @@ import Footer from '../assets/Footer.png';
         </div>
     </div>
 </div>
+
+<script>
+    function handleGoToSignUp() {
+        window.location.href = "/SignupPage";
+    }
+
+    function handleGoToLogin() {
+        window.location.href = "/LoginPage";
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const signUpButton = document.getElementById('signup');
+        if (signUpButton) {
+            signUpButton.addEventListener('click', handleGoToSignUp);
+        }
+
+        const loginButton = document.getElementById('login');
+        if (loginButton) {
+            loginButton.addEventListener('click', handleGoToLogin);
+        }
+    });
+</script>
+
 
 <style>
 
@@ -454,7 +478,7 @@ import Footer from '../assets/Footer.png';
         color: #2537B7;
     }
 
-    #signup {
+    #signup-top {
         font-family: Helvetica, sans-serif;
         font-size: 20px;
         color: #2537B7;
@@ -463,6 +487,29 @@ import Footer from '../assets/Footer.png';
         margin:3rem 2rem;
         border-radius: 40px;
         border:1px solid blue;
+    }
+
+    #signup-top:hover {
+        background-color: #2537B7;
+        color: white;
+        cursor: pointer;
+    }
+
+    #signup-bottom {
+        font-family: Helvetica, sans-serif;
+        font-size: 20px;
+        color: #2537B7;
+        text-align:center;
+        padding:1rem;
+        margin:3rem 2rem;
+        border-radius: 40px;
+        border:1px solid blue;
+    }
+
+    #signup-bottom:hover {
+        background-color: #2537B7;
+        color: white;
+        cursor: pointer;
     }
 
 	@media screen and (max-height: 368px) {
