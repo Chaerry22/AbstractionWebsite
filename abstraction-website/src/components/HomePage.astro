@@ -8,8 +8,8 @@ import card2design from '../assets/card2design.png';
 import CodingCompetition from '../assets/CodingCompetition.png';
 import EventDesign from '../assets/EventDesign.png';
 import Footer from '../assets/Footer.png';
-
 ---
+
 <head>
   <link rel="stylesheet" href="https://use.typekit.net/wiz5trz.css">
 </head>
@@ -27,6 +27,7 @@ import Footer from '../assets/Footer.png';
             </ul>
             <div id="contact">
             <div id="contact-top">Sign Up</div>
+            <div id="login">Login</div>
             </div>
         </nav>
     </header>
@@ -44,7 +45,7 @@ import Footer from '../assets/Footer.png';
         space to have fun and to learn more about technology!<p>
 </div>
 <div id="card-container">
-    <div class="card" id="card1">
+    <div class="card" community-project>
         <h2>Community Projects</h2>
         <p id="card-subtext">Join our Community Projects where you work on a project mentored by a Calvin Professor. </p>
         <div class="learnmore-container">
@@ -52,8 +53,10 @@ import Footer from '../assets/Footer.png';
             <img id="learnarrow" src={learnarrow.src} alt="" fetchpriority="high" />
         </div>
         <img id="card1design" src={card1design.src} alt="" fetchpriority="high" />
+
     </div>
-    <div class="card" id="card2">
+
+    <div class="card" id="hackathon">
         <h2>Hackathon</h2>
         <p id="card-subtext">Join our annual 24 hour hackathon where you get the chance to gain $2000 + in prizes and credentials. </p>
          <div class="learnmore-container">
@@ -61,8 +64,9 @@ import Footer from '../assets/Footer.png';
             <img id="learnarrow" src={learnarrow.src} alt="" fetchpriority="high" />
         </div>
         <img id="card2design" src={card2design.src} alt="" fetchpriority="high" />
-        </div>
-    <div class="card" id="card3">
+    </div>
+
+    <div class="card" id="workshop">
         <h2>Workshops</h2>
         <p id="card-subtext">Explore the different workshops we offer such as resume building and networking sessions. </p>
          <div class="learnmore-container">
@@ -71,6 +75,7 @@ import Footer from '../assets/Footer.png';
         </div>
         <img id="card1design" src={card1design.src} alt="" fetchpriority="high" />
     </div>
+
 </div>
 <div class="event-container">
     <div id="event-text">
@@ -101,49 +106,92 @@ import Footer from '../assets/Footer.png';
     </div>
 </div>
 
+<script>
+    function handleGoToSignUp() {
+        window.location.href = "/SignupPage";
+    }
+
+    function handleGoToLogin() {
+        window.location.href = "/LoginPage";
+    }
+
+    function handleGoToCommunityProjects() {
+        window.location.href = "/CommunityProjects";
+    }
+
+    function handleGoToHackathon() {
+        window.location.href = "/Hackathon";
+    }
+
+    function handleGoToWorkshops() {
+        window.location.href = "/Workshops";
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const signUpButton = document.getElementById('signup');
+    if (signUpButton) {
+        signUpButton.addEventListener('click', handleGoToSignUp);
+    }
+
+    const loginButton = document.getElementById('login');
+    if (loginButton) {
+        loginButton.addEventListener('click', handleGoToLogin);
+    }
+
+    const communityProjectsButton = document.getElementById('community-project');
+    if (communityProjectsButton) {
+        communityProjectsButton.addEventListener('click', handleGoToCommunityProjects);
+    }
+
+    const hackathonButton = document.getElementById('hackathon');
+    if (hackathonButton) {
+        hackathonButton.addEventListener('click', handleGoToHackathon);
+    }
+
+    const workshopsButton = document.getElementById('workshop');
+    if (workshopsButton) {
+        workshopsButton.addEventListener('click', handleGoToWorkshops);
+    }
+    });
+</script>
+
 <style>
 
-/*
-* {
-    border: 1px solid blue !important;
+    #MainBackground {
+    position: absolute;
+    top: 2em; /* Adding the margin at the top */
+    left: 2em; /* Adding the margin on the left */
+    width: calc(100% - 4em); /* Adjusting width to account for margin */
+    height: calc(100% - 4em); /* Adjusting height to account for margin */
+    object-fit: contain; /* Ensures the image scales nicely */
+    z-index: -1;
 }
-*/
 
-	#MainBackground {
-		position: absolute;
-		top: 2em; /* Adding the margin at the top */
-		left: 2em; /* Adding the margin on the left */
-		width: calc(100% - 4em); /* Adjusting width to account for margin */
-		height: calc(100% - 4em); /* Adjusting height to account for margin */
-		object-fit: contain; /* Ensures the image scales nicely */
-        z-index: -1;
-	}
+#container {
+    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    position: relative;
+}
 
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
-		margin: 0;
-		position: relative;
-	}
+/* Header Navigation */
 
-    /* Header Navigation */
-
-    #header {
+#header {
     position: absolute;
     top: 2rem;
     left:3rem;
     width: calc(100% - 10rem);
     z-index: 1;
     padding: 1.5rem 2rem;
-    }
+}
 
-    #header nav {
+#header nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    }
+}
 
-    #header nav ul {
+#header nav ul {
     list-style: none;
     display: flex;
     gap: 2rem;
@@ -151,23 +199,23 @@ import Footer from '../assets/Footer.png';
     padding: 0;
     flex: 1;
     justify-content: center;
-    }
+}
 
-    #header nav ul li a {
-        color: #2537B7;
-        text-decoration: none;
-        font-size: 1.2rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        font-family: Helvetica, sans-serif;
-        transition: color 0.3s ease;
-    }
+#header nav ul li a {
+    color: #2537B7;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: Helvetica, sans-serif;
+    transition: color 0.3s ease;
+}
 
-    #header nav ul li a:hover {
-        color: #7F7FE2; /* Highlight color on hover */
-    }
+#header nav ul li a:hover {
+    color: #7F7FE2; /* Highlight color on hover */
+}
 
-    #logo {
+#logo {
     color: #2537B7;
     font-size: 1.5rem;
     font-family: "quasimoda", sans-serif;
@@ -176,93 +224,93 @@ import Footer from '../assets/Footer.png';
     text-transform: uppercase;
     margin-right: auto;
     padding-left: 3rem;
-    }
+}
 
-    #contact {
-        margin-left: auto;
-        padding-right:3rem;
-        list-style: none;
-        font-family: Helvetica, sans-serif;
-        font-weight: 400;
-    }
+#contact {
+    margin-left: auto;
+    padding-right:3rem;
+    list-style: none;
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+}
 
-    #contact-top {
-        font-family: Helvetica, sans-serif;
-        font-size: 20px;
-        color: #2537B7;
-        text-align:center;
-        padding:0.5rem 2rem;
-        border-radius: 40px;
-        border:1px solid blue;
-    }
+#contact-top {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    color: #2537B7;
+    text-align:center;
+    padding:0.5rem 2rem;
+    border-radius: 40px;
+    border:1px solid blue;
+}
 
-    /* Main Content Styling */
-    #mainContent {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: absolute;
-        top: -7rem;
-        left: 0;
-        width: auto;
-        height: 100%;
-        padding: 1rem;
-        z-index: 1;
-    }
+/* Main Content Styling */
+#mainContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: -7rem;
+    left: 0;
+    width: auto;
+    height: 100%;
+    padding: 1rem;
+    z-index: 1;
+}
 
-    #intro {
-        font-size: 2rem;
-        font-family: "quasimoda", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-        color: #2537B7;
-        max-width: 60%;
-    }
+#intro {
+    font-size: 2rem;
+    font-family: "quasimoda", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #2537B7;
+    max-width: 60%;
+}
 
-    #HomePageDesign{
-        position: absolute;
-        top: 5rem;
-        left: 0;
-        width: 96.9%;
-        height: 96.9%;
-        object-fit: cover;
-    }
+#HomePageDesign{
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 96.9%;
+    height: 96.9%;
+    object-fit: cover;
+}
 
-    /* Second Content Styling */
+/* Second Content Styling */
 
-    #secondContent{
-        width: 100%;
-        margin-top: -3rem;
-        position: relative;
-        display: flex; /* Enables flexbox */
-        justify-content: center; /* Centers content horizontally */
-        text-align: center; 
-    }
+#secondContent{
+    width: 100%;
+    margin-top: -3rem;
+    position: relative;
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers content horizontally */
+    text-align: center; 
+}
 
-    #HPGrayDesign{
-        width: 100%;
-        height: auto;
-        position: absolute;
-        object-fit: cover;
-        left: -2em;
-    }
+#HPGrayDesign{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    object-fit: cover;
+    left: -2em;
+}
 
-    #mission {
-        font-size: 2rem;
-        font-family: "quasimoda", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-        color: #2537B7;
-        max-width: 60%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: absolute;
-    }
+#mission {
+    font-size: 2rem;
+    font-family: "quasimoda", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #2537B7;
+    max-width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+}
 
-    #card-container {
+#card-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -271,9 +319,9 @@ import Footer from '../assets/Footer.png';
     padding: 5rem;
     box-sizing: border-box;
     gap: 2rem;
-    }
+}
 
-    .card {
+.card {
     width: 350px;
     height: 350px;
     border-radius: 50px;
@@ -283,222 +331,250 @@ import Footer from '../assets/Footer.png';
     flex-direction: column; /* Stack elements vertically */
     justify-content: flex-start;
     padding: 2rem;
-    }
+    position: relative; /* Ensure the card is positioned relative */
+}
 
-    #card1{
-        background-color: #E3EAFE;
-        position:relative;
-    }
-
-     #card2{
-        background-color: #FFE7CA;
-        position:relative;
-    }
-
-     #card3{
-        background-color: #E3EAFE;
-        position:relative;
-    }
-
-    h2{
-        color: #2537B7;
-        font-family: "quasimoda", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-        position: relative; /* Position h2 absolutely inside card */
-    }
-
-    #card-subtext {
-    font-family: "quasimoda", sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    font-style: normal;
-    color: #5E5E5E;
-    }
-
-    #learnmore{
-    color: #2537B7;
-    font-family: "quasimoda", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    }
-
-    .learnmore-container {
-    display: flex; /* Enables flexbox layout */
-    align-items: center; /* Vertically centers items */
-    gap: 0.5rem; 
-    margin-top: -1rem;
-    height: 25px;
-    }
-
-    #learnarrow {
-    width: 20px; 
-    height: auto;
-    }
-
-    #card1design{
-    position: absolute; 
+.card img {
+    position: absolute; /* Position the image absolutely within the card */
     bottom: 22px; 
     right: 29px; 
     margin: 0; 
     transform: translate(10%, 10%); 
-    z-index: 1; 
+    z-index: 1; /* Ensure the image is above the background color */
     width: 300px; 
     height: auto;
-    }
-    #card2design{
-    position: absolute; 
-    bottom: 19px; 
-    right: 20px; 
-    margin: 0; 
-    transform: translate(10%, 10%); 
-    z-index: 1; 
-    width: 220px; 
-    height: auto;
-    }
+}
 
-    /*Event*/
+.card:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
 
-     .event-container {
+#community-project {
+    background-color: #E3EAFE;
+    position: relative;
+    z-index: 0; /* Ensure the background color is below the image */
+}
+
+#hackathon {
+    background-color: #FFE7CA;
+    position: relative;
+    z-index: 0; /* Ensure the background color is below the image */
+}
+
+#workshop {
+    background-color: #E3EAFE;
+    position: relative;
+    z-index: 0; /* Ensure the background color is below the image */
+}
+
+h2{
+    color: #2537B7;
+    font-family: "quasimoda", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    position: relative; /* Position h2 absolutely inside card */
+}
+
+#card-subtext {
+font-family: "quasimoda", sans-serif;
+font-weight: 300;
+font-size: 20px;
+font-style: normal;
+color: #5E5E5E;
+}
+
+#learnmore{
+color: #2537B7;
+font-family: "quasimoda", sans-serif;
+font-weight: 500;
+font-size: 20px;
+}
+
+.learnmore-container {
+display: flex; /* Enables flexbox layout */
+align-items: center; /* Vertically centers items */
+gap: 0.5rem; 
+margin-top: -1rem;
+height: 25px;
+}
+
+#learnarrow {
+width: 20px; 
+height: auto;
+}
+
+#card1design{
+position: absolute; 
+bottom: 22px; 
+right: 29px; 
+margin: 0; 
+transform: translate(10%, 10%); 
+z-index: 1; 
+width: 300px; 
+height: auto;
+}
+#card2design{
+position: absolute; 
+bottom: 19px; 
+right: 20px; 
+margin: 0; 
+transform: translate(10%, 10%); 
+z-index: 1; 
+width: 220px; 
+height: auto;
+}
+
+/*Event*/
+
+ .event-container {
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 5rem 8rem;
+
+box-sizing: border-box;
+gap: 4rem;
+}
+
+#CodingCompetition{
+    width:600px;
+    height:auto;
+}
+
+#event-title{
+    color: #FF5B00;
+    font-family: "quasimoda", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size:20px;
+}
+
+#EventDesign{
+    width:600px;
+    height:auto;
+    z-index:-1;
+    flex-start: end;
+    margin-top:-25rem;
+    position: absolute; /* Enable absolute positioning */
+    right: 0;
+}
+
+.footer-container{
+    position: relative; /* Parent container positioning */
     width: 100%;
+    height: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center content horizontally */
     align-items: center;
-    padding: 5rem 8rem;
-    
+    padding: 3rem;
     box-sizing: border-box;
-    gap: 4rem;
-    }
-
-    #CodingCompetition{
-        width:600px;
-        height:auto;
-    }
-
-    #event-title{
-        color: #FF5B00;
-        font-family: "quasimoda", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        font-size:20px;
-    }
-
-    #EventDesign{
-        width:600px;
-        height:auto;
-        z-index:-1;
-        flex-start: end;
-        margin-top:-25rem;
-        position: absolute; /* Enable absolute positioning */
-        right: 0;
-    }
-
-    .footer-container{
-        position: relative; /* Parent container positioning */
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center; /* Center content horizontally */
-        align-items: center;
-        padding: 3rem;
-        box-sizing: border-box;
-        
-    }
-
-    #Footer {
-        width: 87rem;
-        height: auto;
-        position: absolute; /* Place the image in the background */
-        z-index: -1;
-    }
-
-    #footer-card-container{
-        display: flex;
-        justify-content: space-around; /* Space out the columns evenly */
-        width: 100%; /* Full width */
-        padding: 6rem; /* Add padding for spacing */
-        z-index: 1; /* Ensure content is above the image */
-        position: relative;
-    }
-
-    .footer-card {
-    text-align: center; 
-    flex: 1; 
-    padding: 2rem; 
-    color: white; 
     
+}
 
-    }
+#Footer {
+    width: 87rem;
+    height: auto;
+    position: absolute; /* Place the image in the background */
+    z-index: -1;
+}
 
-    .footer-container #footer-card li a {
+#footer-card-container{
+    display: flex;
+    justify-content: space-around; /* Space out the columns evenly */
+    width: 100%; /* Full width */
+    padding: 6rem; /* Add padding for spacing */
+    z-index: 1; /* Ensure content is above the image */
+    position: relative;
+}
+
+.footer-card {
+text-align: center; 
+flex: 1; 
+padding: 2rem; 
+color: white; 
+
+
+}
+
+.footer-container #footer-card li a {
+font-family: Helvetica, sans-serif;
+font-size: 20px;
+color: #2537B7;
+text-decoration: none;
+list-style: none;
+transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth effect */
+}
+
+#footer-card li {
+list-style: none;
+margin: 2rem 0;
+}
+
+.footer-container #footer-card li a:hover {
+color: #7F7FE2; 
+}
+
+#email{
     font-family: Helvetica, sans-serif;
     font-size: 20px;
     color: #2537B7;
-    text-decoration: none;
-    list-style: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth effect */
+}
+
+#signup {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    color: #2537B7;
+    text-align:center;
+    padding:1rem;
+    margin:3rem 2rem;
+    border-radius: 40px;
+    border:1px solid blue;
+}
+
+#signup:hover {
+    background-color: #2537B7;
+    color: white;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+@media screen and (max-height: 368px) {
+    #news {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #container {
+        display: flex;
+        flex-direction: column;
     }
 
-    #footer-card li {
-    list-style: none;
-    margin: 2rem 0;
+    #hero {
+        display: block;
+        padding-top: 10%;
     }
 
-   .footer-container #footer-card li a:hover {
-    color: #7F7FE2; 
+    #links {
+        flex-wrap: wrap;
     }
 
-    #email{
-        font-family: Helvetica, sans-serif;
-        font-size: 20px;
-        color: #2537B7;
+    #links a.button {
+        padding: 14px 18px;
     }
 
-    #signup {
-        font-family: Helvetica, sans-serif;
-        font-size: 20px;
-        color: #2537B7;
-        text-align:center;
-        padding:1rem;
-        margin:3rem 2rem;
-        border-radius: 40px;
-        border:1px solid blue;
+    #news {
+        right: 16px;
+        left: 16px;
+        bottom: 2.5rem;
+        max-width: 100%;
     }
 
-	@media screen and (max-height: 368px) {
-		#news {
-			display: none;
-		}
-	}
-
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
-
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
-
-		#links {
-			flex-wrap: wrap;
-		}
-
-		#links a.button {
-			padding: 14px 18px;
-		}
-
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
-		}
-
-		h1 {
-			line-height: 1.5;
-		}
-	}
+    h1 {
+        line-height: 1.5;
+    }
+}
 </style>
