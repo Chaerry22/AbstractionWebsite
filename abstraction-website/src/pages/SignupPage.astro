@@ -1,0 +1,22 @@
+<div>
+    <h1>SignUp</h1>
+    <form action="/signup" method="post">
+        <label for="username">Email:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">SignUp</button>
+    </form>
+
+    <p>Already have an account? <a id="login" href="/login">Login</a></p>
+</div>
+
+<script>
+    const loginLink = document.getElementById('login');
+    if (loginLink) {
+        loginLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.href = '/LoginPage';
+        });
+    }
+</script>
