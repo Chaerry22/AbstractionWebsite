@@ -85,8 +85,9 @@ import Footer from '../assets/Footer.png';
     <img id="CodingCompetition" src={CodingCompetition.src} alt="" fetchpriority="high" />
 </div>
 <img id="EventDesign" src={EventDesign.src} alt="" fetchpriority="high" />
+
 <div class ="footer-container">
-    <img id="Footer" src={Footer.src} alt="" fetchpriority="high" />
+    <!-- <img id="Footer" src={Footer.src} alt="" fetchpriority="high" /> -->
     <div id="footer-card-container">
         <div id="footer-card">
             <h2>Ready To Get Started?</h2>
@@ -464,21 +465,26 @@ gap: 4rem;
 
 .footer-container{
     position: relative; /* Parent container positioning */
-    width: 100%;
-    height: auto;
+    width: 80%;
+    height: 300px;
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: center;
     padding: 3rem;
     box-sizing: border-box;
-    
+    background: linear-gradient(135deg, #A8D5BA, #92C5F0, #FEE9B2, #F9C2C3);
+    background-size: 200% 200%; /* Ensure the background size is large enough for the animation */
+    animation: gradientBG 15s ease infinite;
+    border-radius: 100px;
+    z-index: 1; /* Ensure content is above the image */
+    margin: 0 auto;
+    padding: 10px;
 }
 
-#Footer {
-    width: 87rem;
-    height: auto;
-    position: absolute; /* Place the image in the background */
-    z-index: -1;
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 #footer-card-container{
@@ -578,3 +584,5 @@ color: #7F7FE2;
     }
 }
 </style>
+
+
