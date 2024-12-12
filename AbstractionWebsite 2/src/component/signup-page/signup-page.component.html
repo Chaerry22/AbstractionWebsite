@@ -1,0 +1,37 @@
+
+<body>
+  <head>
+    <link rel="stylesheet" href="https://use.typekit.net/wiz5trz.css">
+  </head>
+  
+  <div id="container">
+    <header id="header">
+      <nav>
+        <div id="logo">Abstraction</div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div id="contact">
+          <div id="contact-top">Sign Up</div>
+          <a href="/login" id="login">Login</a>
+        </div>
+      </nav>
+    </header>
+    <main id="mainContent">
+      <div id="signup-container">
+        <h1>Sign Up</h1>
+        <form action="/signup" method="post">
+          <label for="username">Email:</label>
+          <input type="text" id="username" name="username" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a id="login-link" href="/login">Login</a></p>
+      </div>
+    </main>
+  </div>
+</body>
