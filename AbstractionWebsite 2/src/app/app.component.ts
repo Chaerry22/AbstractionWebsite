@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { RouterLink } from '@angular/router';;
+import { ServicesService, Signup } from './services/firestore-services.service';
+
 
 
 @Component({
@@ -11,7 +12,5 @@ import { RouterLink } from '@angular/router';;
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'AbstractionWebsite';
-//     router: any;
 
 }

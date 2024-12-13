@@ -1,34 +1,58 @@
 {
-  "hash": "82e071f4",
-  "configHash": "45d8871f",
-  "lockfileHash": "333169ae",
-  "browserHash": "979b3e56",
+  "hash": "8b6ea196",
+  "configHash": "d8ce8434",
+  "lockfileHash": "589c48b7",
+  "browserHash": "37fc7bdf",
   "optimized": {
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "6744e4a1",
+      "fileHash": "1251c2fd",
+      "needsInterop": false
+    },
+    "@angular/fire/app": {
+      "src": "../../../../../../node_modules/@angular/fire/fesm2022/angular-fire-app.mjs",
+      "file": "@angular_fire_app.js",
+      "fileHash": "c1fc4897",
+      "needsInterop": false
+    },
+    "@angular/fire/firestore": {
+      "src": "../../../../../../node_modules/@angular/fire/fesm2022/angular-fire-firestore.mjs",
+      "file": "@angular_fire_firestore.js",
+      "fileHash": "b46f5b3a",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "d7ecb20e",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "761b7c86",
+      "fileHash": "818d7591",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "7f4abb0e",
+      "fileHash": "3c8830a7",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-5BRWUF3M": {
-      "file": "chunk-5BRWUF3M.js"
+    "chunk-JNNTOQPG": {
+      "file": "chunk-JNNTOQPG.js"
     },
-    "chunk-YJFJI4Y6": {
-      "file": "chunk-YJFJI4Y6.js"
+    "chunk-4PJUFFAA": {
+      "file": "chunk-4PJUFFAA.js"
+    },
+    "chunk-P6HZDKHY": {
+      "file": "chunk-P6HZDKHY.js"
+    },
+    "chunk-LFSWDQYP": {
+      "file": "chunk-LFSWDQYP.js"
     }
   }
 }
