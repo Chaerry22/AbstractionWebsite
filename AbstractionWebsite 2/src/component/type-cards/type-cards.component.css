@@ -17,16 +17,16 @@
     background-color: #f0f0f0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
-    /* Use flexbox for card content layout */
+
     flex-direction: column;
-    /* Stack elements vertically */
+
     justify-content: flex-start;
     padding: 2rem;
     position: relative;
-    /* Ensure the card is positioned relative */
 
+    text-decoration: none;
     transition: transform 0.15s ease-in-out;
-    /* Smooth animation */
+
 }
 
 .card img {
@@ -123,3 +123,4 @@ h2 {
     width: 220px;
     height: auto;
 }
+
