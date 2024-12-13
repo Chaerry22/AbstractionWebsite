@@ -1,65 +1,136 @@
-/* General Styling */
-body {
-    margin: 0;
-    font-family: "quasimoda", sans-serif;
-    background: linear-gradient(135deg, #A8D5BA, #92C5F0, #FEE9B2, #F9C2C3);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-  }
-  
-  @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  
-  #container {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-  }
-  
-  /* Header */
-  #header {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Form Styling */
-  .form-group {
-    margin-bottom: 1rem;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  input {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 0.5rem 1rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
+ /* General Styling */
+ body {
+  margin: 0;
+  font-family: "quasimoda", sans-serif;
+  background: linear-gradient(135deg, #A8D5BA, #92C5F0, #FEE9B2, #F9C2C3);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+/* Header */
+#header {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+#contact {
+  display: flex;
+  gap: 1rem;
+}
+
+#contact-top, #login {
+  color: #333;
+  cursor: pointer;
+}
+
+/* Main Content */
+#mainContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+/* Sign-Up Container */
+#signup-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+#signup-container h1 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+#signup-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#signup-container label {
+  color: #333;
+  text-align: left;
+}
+
+#signup-container input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+#signup-container button {
+  padding: 0.5rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#signup-container button:hover {
+  background-color: #555;
+}
+
+#signup-container p {
+  color: #333;
+}
+
+#signup-container a {
+  color: #333;
+  text-decoration: none;
+}
+
+#signup-container a:hover {
+  text-decoration: underline;
+}
+
+
+

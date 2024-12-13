@@ -24,6 +24,9 @@
     padding: 2rem;
     position: relative;
     /* Ensure the card is positioned relative */
+
+    transition: transform 0.15s ease-in-out;
+    /* Smooth animation */
 }
 
 .card img {
@@ -44,8 +47,7 @@
     /* Scale up the card on hover */
     cursor: pointer;
     /* Change cursor to pointer */
-    transition: transform 0.3s ease-in-out;
-    /* Smooth animation */
+
 }
 
 #card{
@@ -76,6 +78,13 @@ h2 {
     font-family: "quasimoda", sans-serif;
     font-weight: 500;
     font-size: 20px;
+    transition: text-decoration-color 0.15s ease-in-out;
+    text-decoration-color: transparent;
+}
+
+#learnmore:hover {
+    text-decoration: underline;
+    text-decoration-color: inherit;
 }
 
 .learnmore-container {

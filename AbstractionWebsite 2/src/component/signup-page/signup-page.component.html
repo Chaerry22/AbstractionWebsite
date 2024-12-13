@@ -4,24 +4,18 @@
   </head>
   
   <div id="container">
-    <header id="header">
-      <nav>
-        <div id="logo">Abstraction</div>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div id="contact">
-          <div id="contact-top">Sign Up</div>
-          <a href="/login" id="login">Login</a>
-        </div>
-      </nav>
-    </header>
+    
+
     <main id="mainContent">
+      <div id="propoganda">
+        <h2>
+          Come join us at this thing nasdk fjnaksdfj sakfsk fjsaklfjslafjlskjfslaf jslafj lskfj lksjflsajflsa jflksdjf lsakjlsk fjlskjfas
+        </h2>
+        
+      </div>
+
       <div id="signup-container">
-        <h1>Sign Up</h1>
+        <h1 id="signup-title">Sign Up</h1>
 
         <!-- Success message -->
         @if(successMessage){
@@ -38,10 +32,14 @@
           <label for="password">Password:</label>
           <input type="password" id="password" name="password" [(ngModel)]="newUser.password" required>
           
-          <button type="submit">Sign Up</button>
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="confirmPassword"required>
+
+          <button type="submit" [disabled]="passwordsMatch">Sign Up</button>
         </form>
 
         <p>Already have an account? <a id="login-link" href="/login">Login</a></p>
+
       </div>
     </main>
   </div>

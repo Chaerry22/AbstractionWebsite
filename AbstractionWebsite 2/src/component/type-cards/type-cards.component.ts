@@ -3,11 +3,11 @@ import { RouterOutlet } from '@angular/router';
 
 
 @Component({
-  selector: 'app-type-cards',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './type-cards.component.html',
-  styleUrl: './type-cards.component.css'
+    selector: 'app-type-cards',
+    standalone: true,
+    imports: [RouterOutlet],
+    templateUrl: './type-cards.component.html',
+    styleUrl: './type-cards.component.css'
 })
 export class TypeCardsComponent {
   title = input.required<string>();

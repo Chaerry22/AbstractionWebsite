@@ -1,9 +1,11 @@
  /* General Styling */
  body {
     margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: "quasimoda", sans-serif;
     background: linear-gradient(135deg, #A8D5BA, #92C5F0, #FEE9B2, #F9C2C3);
-    background-size: 400% 400%;
+    background-size: 200% 200%;
     animation: gradientBG 15s ease infinite;
     z-index: -1;
   }
@@ -19,22 +21,10 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     background-color: transparent;
-  }
-
-  /* Header */
-  #header {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
+}
 
   #logo {
     font-size: 24px;
@@ -63,30 +53,52 @@
     cursor: pointer;
   }
 
-  /* Main Content */
-  #mainContent {
+  #container {
+    position: relative;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+#propoganda {
+  width: 33.33%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: flex-start;
+  padding: 2rem;
+  margin-bottom: 10rem;
+  margin-right: 10rem;
+  box-sizing: border-box;
+}
+
+#mainContent {
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
     flex-grow: 1;
-    padding: 2rem;
-  }
+    padding: 0rem;
+    width: 66.67%;
+}
 
-  /* Sign-Up Container */
-  #signup-container {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-  }
 
-  #signup-container h1 {
-    color: #333;
-    margin-bottom: 1rem;
-  }
+#signup-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 3rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  width: 33.33%;
+  min-height: 100vh;
+  margin: 0;
+}
+#signup-container h1 {
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
 
   #signup-container form {
     display: flex;

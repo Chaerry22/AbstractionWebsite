@@ -3,6 +3,10 @@
     z-index: 2;
 }
 
+a{
+    text-decoration: none;
+}
+
 #container {
     font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
     height: 100%;

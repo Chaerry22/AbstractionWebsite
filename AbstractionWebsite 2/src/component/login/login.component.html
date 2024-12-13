@@ -1,22 +1,42 @@
 <body>
-    <div id="container">
-      <header id="header">
-        <h1>Login</h1>
-      </header>
-      <main>
-        <form>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-          </div>
-          <button type="submit">Login</button>
-        </form>
-      </main>
-    </div>
-  </body>
-
+  <head>
+    <link rel="stylesheet" href="https://use.typekit.net/wiz5trz.css">
+  </head>
   
+  <div id="container">
+    <header id="header">
+      <nav>
+        <div id="logo">Abstraction</div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div id="contact">
+          <div id="contact-top">Sign Up</div>
+          <a href="/login" id="login">Login</a>
+        </div>
+      </nav>
+    </header>
+    <main id="mainContent">
+      <div id="signup-container">
+        <h1>Login</h1>
+
+
+        <form (ngSubmit)="onLogin()">
+          <label for="username">Email:</label>
+          <input type="email" id="username" name="username" [(ngModel)]="user.email" required>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
+          
+          <button type="submit">Sign Up</button>
+        </form> 
+
+        <p>Dont have an account? <a id="login-link" href="/signup-page">Sign Up</a></p>
+      </div>
+    </main>
+  </div>
+</body>
+
