@@ -37,12 +37,12 @@
 
           <label for="grade">Grade:</label>
          
-          <select [(ngModel)] = "selectedValue">
-            @for(item of options; track $index) {
-            <option>              
-                <li>{{item}}</li>             
-            </option>
-          }
+          <select [(ngModel)] = "newUser.grade" name="grade" id="grade" required>
+            <option value="Freshman">Freshman</option>
+            <option value="Sophomore">Sophomore</option>
+            <option value="Junior">Junior</option>
+            <option value="Senior">Senior</option>
+            
           </select>
           <button type="submit" [disabled]="check">Sign Up</button>
         </form>

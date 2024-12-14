@@ -40,7 +40,6 @@ export class SignupPageComponent {
 
   onSignup() {
     if (this.newUser.email && this.newUser.firstname && this.newUser.lastname && this.newUser.grade) {
-      this.newUser.grade = this.selectedValue
       // Attempt to add user to the database
       this.users.addUser(this.newUser).then(() => {
         this.successMessage = 'Signup Successful';
