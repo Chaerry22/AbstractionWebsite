@@ -1,4 +1,6 @@
-
+*{
+    border: 1px solid blue;
+}
 
 a{
     text-decoration: none;
@@ -6,32 +8,18 @@ a{
 
 #MainBackground {
     position: relative;
-    top: 2rem;
-    left: 2rem;
     background-size: cover;
-    z-index: -1;
+    z-index: -4;
     border: 2px solid pink;
     box-sizing: border-box;
     width: calc(100% - 4rem); /* Account for left and right spacing */
-    max-width: 100%; /* Ensure it doesn't exceed the container */
     height: auto;
+    
 }
 
-    #MainBackground2 {
-    position: relative;
-    top: 2rem;
-    left: 2rem;
-    background-size: cover;
-    z-index: -1;
-    border: 2px solid pink;
-    box-sizing: border-box;
-    width: calc(100% - 4rem); /* Account for left and right spacing */
-    max-width: 100%; /* Ensure it doesn't exceed the container */
-    height: auto;
-}
 
 #container {
-    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+   /*font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
     height: 100%;
     width: 100%;
     margin: 0 auto;
@@ -39,7 +27,25 @@ a{
     border: 2px solid red;
     box-sizing: border-box;
     overflow: hidden;
+*/
+
+    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    height: auto;
+    width: calc(100% - 4rem);
+    top: 2rem;
+    left: 2rem;
+    position: relative;
+    border: 2px solid rgb(150, 142, 142);
+    box-sizing: border-box;
+    overflow: hidden;
+    background: linear-gradient(135deg, #F9C2C3 ,#A8D5BA, #92C5F0, #FEE9B2, #F9C2C3);
+    border-radius: 5rem;
+    border: none;
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
 }
+
+
 
 /* Header Navigation */
 
@@ -134,7 +140,7 @@ a{
     height: 100%;
     padding: 1rem;
     z-index: 1;
-    border: 2px solid green;
+
 }
 
 #intro {
@@ -175,14 +181,14 @@ a{
     display: flex; /* Enables flexbox */
     justify-content: center; /* Centers content horizontally */
     text-align: center; 
-    margin-top: 2rem;
-    border: 1px solid blue;
+    margin-top: 4rem;
 }
 
 #HPGrayDesign{
-    width: 100%;
+    width: calc(100% - 4rem);
     height: auto;
     position: absolute;
+    margin-left: 2rem;
     object-fit: cover;
     justify-content: center; 
     left: -2em;
@@ -221,7 +227,7 @@ a{
     margin-top: 20rem;
     padding: 2rem;
     box-sizing: border-box;
-    gap: 2rem; /* Space between cards */
+    gap: 8rem; /* Space between cards */
 }
 
 /*Event*/
@@ -287,8 +293,8 @@ gap: 4rem;
 #footer-card-container{
     display: flex;
     justify-content: space-around; /* Space out the columns evenly */
-    width: 100%; /* Full width */
-    z-index: 1; /* Ensure content is above the image */
+    width: 100%; 
+    z-index: 1;
     position: relative;
 }
 

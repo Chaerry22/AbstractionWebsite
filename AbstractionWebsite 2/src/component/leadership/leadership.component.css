@@ -4,6 +4,12 @@ a{
     text-decoration: none;
 }
 
+#background{
+    width: 50%;
+    position:absolute;
+    right:0;
+}
+
 #container {
     font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
     height: 40rem;
@@ -17,6 +23,8 @@ a{
     background: linear-gradient(135deg, #98C379, #ADCBE7,  #FEB59D);
     border-radius: 5rem;
     border: none;
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
 }
 
 

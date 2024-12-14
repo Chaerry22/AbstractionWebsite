@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { inject } from '@angular/core';
 import { ServicesService, Signup } from '../../app/services/firestore-services.service';
 import { FormsModule } from '@angular/forms';
@@ -9,7 +10,7 @@ import { CommonModule } from '@angular/common';
 @Component({
     selector: 'app-signup-page',
     standalone: true,
-    imports: [CommonModule, FormsModule],
+    imports: [CommonModule, FormsModule, RouterLink],
     templateUrl: './signup-page.component.html',
     styleUrls: ['./signup-page.component.css']
 })

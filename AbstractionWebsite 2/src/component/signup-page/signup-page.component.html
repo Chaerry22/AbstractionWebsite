@@ -4,44 +4,51 @@
   </head>
   
   <div id="container">
-    
+    <header id="header">
+      <nav>
+        <div id="logo">Abstraction</div>
+        <ul>
+          <li><a routerLink="/home-page">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a routerLink="/leadership">Leadership</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <main id="mainContent">
       <div id="propoganda">
         <h2>
-          Come join us at this thing nasdk fjnaksdfj sakfsk fjsaklfjslafjlskjfslaf jslafj lskfj lksjflsajflsa jflksdjf lsakjlsk fjlskjfas
+          Join Abstraction's mailing list to stay updated on all things computer science! Be the first to know about upcoming events, workshops, community projects, and opportunities to grow your skills and network with like-minded peers. Don’t miss out—sign up today!
         </h2>
-        
-      </div>
-
-      <div id="signup-container">
-        <h1 id="signup-title">Sign Up</h1>
-
-        <!-- Success message -->
-        @if(successMessage){
-        <div id="success-message">{{ successMessage }}</div>
-        }
-        @else{
-          <div id="error-message">{{successMessage}}</div>
-        }
-        <!-- Sign-up form -->
-        <form (ngSubmit)="onSignup()">
-          <label for="username">Email:</label>
-          <input type="email" id="username" name="username" [(ngModel)]="newUser.email" required>
-          
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" [(ngModel)]="newUser.password" required>
-          
-          <label for="confirmPassword">Confirm Password:</label>
-          <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="confirmPassword"required>
-
-          <button type="submit" [disabled]="passwordsMatch">Sign Up</button>
-        </form>
-
-        <p>Already have an account? <a id="login-link" href="/login">Login</a></p>
-
       </div>
     </main>
+  </div>
+  <div id="signup-container">
+    <h1 id="signup-title">Sign Up</h1>
+
+    <!-- Success message -->
+    @if(successMessage){
+    <div id="success-message">{{ successMessage }}</div>
+    }
+    @else{
+      <div id="error-message">{{successMessage}}</div>
+    }
+    <!-- Sign-up form -->
+    <form (ngSubmit)="onSignup()">
+      <label for="username">Email:</label>
+      <input type="email" id="username" name="username" [(ngModel)]="newUser.email" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="newUser.password" required>
+      
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="confirmPassword"required>
+
+      <button type="submit" [disabled]="passwordsMatch">Sign Up</button>
+    </form>
+
+    <p>Already have an account? <a id="login-link" href="/login">Login</a></p>
+
   </div>
 </body>
 
