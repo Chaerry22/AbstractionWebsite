@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { ProjectsComponent } from '../projects/projects.component';
+
 
 @Component({
     selector: 'app-community-project',
     standalone: true,
-    imports: [],
+    imports: [ProjectsComponent],
     templateUrl: './community-project.component.html',
     styleUrl: './community-project.component.css'
 })
