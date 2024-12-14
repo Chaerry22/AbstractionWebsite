@@ -9,8 +9,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './leadership-card.component.css'
 })
 export class LeadershipCardComponent {
-  title = input.required<string>();
-  subtitle = input.required<string>();
+  name = input.required<string>();
+  position = input.required<string>();
   design = input.required<string>();
   backgroundcolor = input.required<string>();
 }

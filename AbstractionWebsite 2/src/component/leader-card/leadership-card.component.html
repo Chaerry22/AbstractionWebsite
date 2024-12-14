@@ -1,1 +1,9 @@
-<p>leadership-card works!</p>
+<div class="card" id="card" [style.background-color]="backgroundcolor()">
+    <div>
+        <img id="leader-pic" src={{design()}} alt="" fetchpriority="high" />
+    </div>
+    <div class = "leader-container">
+        <h2>{{name()}}</h2>
+        <p id="card-subtext">{{position()}} </p>
+    </div>
+</div>

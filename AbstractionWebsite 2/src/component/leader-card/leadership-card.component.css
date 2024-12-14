@@ -1,0 +1,100 @@
+
+
+.card {
+    flex: 1 1 calc(30% - 2rem); /* Allow cards to resize and fit three per row */
+    max-width: 350px;
+    aspect-ratio: 1 / 1.2; /* Let height adjust with content */
+    border-radius: 50px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align items from the top */
+    padding: 2rem; /* Inner spacing for the card */
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.15s ease-in-out;
+}
+
+#leader-pic {
+    width: 100%; /* Take up full width inside the card */
+    max-width: 300px; /* Limit the maximum size of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50px; /* Rounded corners for the image */
+    margin-bottom: 1rem; /* Space between image and text */
+    align-self: center; /* Center image horizontally */
+}
+
+.leader-container {
+    text-align: center; /* Center align text */
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+h2 {
+    color: #2537B7;
+    font-family: "quasimoda", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    position: relative;
+}
+
+#card-subtext {
+    font-family: "quasimoda", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    font-style: normal;
+    color: #5E5E5E;
+}
+
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 1024px) {
+    #card-container {
+        justify-content: space-around; /* Spread cards evenly */
+        gap: 1rem;
+    }
+    .card {
+        flex: 1 1 calc(45% - 2rem) /* Two cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    #card-container {
+        padding: 1rem;
+    }
+    .card {
+        flex: 1 1 100%; /* One card per row */
+    }
+    .card img {
+        width: 60%;
+    }
+}
+
+#card1design {
+    position: absolute;
+    bottom: 22px;
+    right: 29px;
+    margin: 0;
+    transform: translate(10%, 10%);
+    z-index: 1;
+    width: 300px;
+    height: auto;
+}
+
+#card2design {
+    position: absolute;
+    bottom: 19px;
+    right: 20px;
+    margin: 0;
+    transform: translate(10%, 10%);
+    z-index: 1;
+    width: 220px;
+    height: auto;
+}
+

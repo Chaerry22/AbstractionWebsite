@@ -4,8 +4,7 @@ a{
     text-decoration: none;
 }
 
-
-    #MainBackground {
+#MainBackground {
     position: relative;
     top: 2rem;
     left: 2rem;
@@ -17,7 +16,6 @@ a{
     max-width: 100%; /* Ensure it doesn't exceed the container */
     height: auto;
 }
-
 
     #MainBackground2 {
     position: relative;
@@ -212,6 +210,8 @@ a{
     position: absolute;
 }
 
+
+
 #card-container {
     width: 100%;
     display: flex;
@@ -221,8 +221,7 @@ a{
     margin-top: 20rem;
     padding: 2rem;
     box-sizing: border-box;
-    gap: 10rem; /* Space between cards */
-    border: 1px solid blue;
+    gap: 2rem; /* Space between cards */
 }
 
 /*Event*/

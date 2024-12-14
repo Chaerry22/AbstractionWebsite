@@ -13,7 +13,6 @@ import { EventComponent } from "../event/event.component";
 export class HomePageComponentComponent {
   title = 'AbstractionWebsite';
   router: any;
-//     router: any;
 
 
 navigateToSignUp() {
