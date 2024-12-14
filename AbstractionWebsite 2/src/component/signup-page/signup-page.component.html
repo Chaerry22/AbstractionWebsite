@@ -20,6 +20,53 @@
         <h2>
           Join Abstraction's mailing list to stay updated on all things computer science! Be the first to know about upcoming events, workshops, community projects, and opportunities to grow your skills and network with like-minded peers. Don’t miss out—sign up today!
         </h2>
+<<<<<<< HEAD
+=======
+        
+      </div>
+
+      <div id="signup-container">
+        <h1 id="signup-title">Sign Up</h1>
+
+        <!-- Success message -->
+        @if(successMessage){
+        <div id="success-message">{{ successMessage }}</div>
+        }
+        @else{
+          <div id="error-message">{{successMessage}}</div>
+        }
+        <!-- Sign-up form -->
+        <form (ngSubmit)="onSignup()">
+          <label for="username">Email:</label>
+          <input type="email" id="username" name="username" [(ngModel)]="newUser.email" required>
+          
+          <label for="firstname">First Name:</label>
+          <input type="firstname" id="firstname" name="firstname" [(ngModel)]="newUser.firstname" required>
+          
+          <label for="lastname">Last Name:</label>
+          <input type="lastname" id="lastname" name="lastname" [(ngModel)]="newUser.lastname" required>
+
+          <label for="grade">Grade:</label>
+         
+          <select [(ngModel)] = "newUser.grade" name="grade" id="grade" required>
+            <option value="Freshman">Freshman</option>
+            <option value="Sophomore">Sophomore</option>
+            <option value="Junior">Junior</option>
+            <option value="Senior">Senior</option>
+            
+          </select>
+          <button type="submit" [disabled]="check">Sign Up</button>
+        </form>
+
+        <p>Already have an account? <a id="login-link" href="/login">Login</a></p>
+
+        <div>
+          {{newUser.firstname}}
+          {{newUser.lastname}}
+          {{newUser.grade}}
+        </div>
+
+>>>>>>> a558e49b02ed50090129d420a4991e08470d6873
       </div>
     </main>
   </div>

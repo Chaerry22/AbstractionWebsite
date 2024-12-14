@@ -18,24 +18,29 @@ export class SignupPageComponent {
   users = inject(ServicesService);
   router = inject(Router);
 
+  selectedValue: string = '';
+  options: string[] = ['Freshman', 'Sophomore', 'Junior', 'Senior', 'Other']
+
   newUser: Signup = {
+    firstname: '',
+    lastname: '',
     email: '',
-    password: ''
+    grade: '',
   };
 
-  confirmPassword: string = '';
-  passwordsMatch: boolean = false;
-
+  check = false;
 
   successMessage: string = '';
   errorMessage: string = '' 
 
-  checkPasswords() {
-    this.passwordsMatch = this.newUser.password === this.confirmPassword;
+  checkInputs() {
+    if (this.newUser.email && this.newUser.firstname && this.newUser.lastname && this.newUser.grade){
+      this.check = true
+    };
   }
 
   onSignup() {
-    if (this.newUser.email && this.newUser.password===this.confirmPassword) {
+    if (this.newUser.email && this.newUser.firstname && this.newUser.lastname && this.newUser.grade) {
       // Attempt to add user to the database
       this.users.addUser(this.newUser).then(() => {
         this.successMessage = 'Signup Successful';
@@ -43,15 +48,16 @@ export class SignupPageComponent {
         // Redirect to the home page after 2 seconds
         setTimeout(() => {
           this.router.navigate(['/']);
-        }, 2000);
+        }, 1500);
       }).catch((error) => {
         this.successMessage = error.message;
       });
 
       // Clear form fields after submission
+      this.newUser.firstname = '';
+      this.newUser.lastname = '';
       this.newUser.email = '';
-      this.newUser.password = '';
-      this.confirmPassword = '';
+      this.newUser.grade = this.selectedValue;
     }
   }
 }

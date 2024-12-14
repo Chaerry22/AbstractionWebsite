@@ -4,8 +4,10 @@ import { inject } from '@angular/core';
 import { Observable } from 'rxjs';
 
 export interface Signup {
+  firstname: string;
+  lastname: string;
   email: string;
-  password: string;
+  grade: string;
 }
 
 export interface Login {
@@ -31,8 +33,10 @@ export class ServicesService {
   // Method to add a new user with email uniqueness check
   async addUser(user: Signup): Promise<void> {
     const newUser: Signup = {
+      firstname: user.firstname,
+      lastname: user.lastname,
       email: user.email,
-      password: user.password
+      grade: user.grade
     };
 
     // Query to check if a user with the same email already exists
