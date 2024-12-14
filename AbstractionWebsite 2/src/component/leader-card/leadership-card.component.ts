@@ -11,6 +11,7 @@ import { RouterOutlet } from '@angular/router';
 export class LeadershipCardComponent {
   name = input.required<string>();
   position = input.required<string>();
+  email = input.required<string>();
   design = input.required<string>();
   backgroundcolor = input.required<string>();
 }

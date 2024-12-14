@@ -19,7 +19,8 @@
 
 #leader-pic {
     width: 100%; /* Take up full width inside the card */
-    max-width: 300px; /* Limit the maximum size of the image */
+    max-width: 300px;
+    aspect-ratio: 1 / 1; /* Limit the maximum size of the image */
     height: auto; /* Maintain aspect ratio */
     border-radius: 50px; /* Rounded corners for the image */
     margin-bottom: 1rem; /* Space between image and text */
@@ -44,12 +45,24 @@ h2 {
     position: relative;
 }
 
+#card-subtext-1 {
+    font-family: "quasimoda", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    font-style: normal;
+    color: #5E5E5E;
+    margin-top: 0;
+    
+}
+
 #card-subtext {
     font-family: "quasimoda", sans-serif;
     font-weight: 300;
     font-size: 20px;
     font-style: normal;
     color: #5E5E5E;
+    margin-top: 0;
+    
 }
 
 
@@ -96,5 +109,12 @@ h2 {
     z-index: 1;
     width: 220px;
     height: auto;
+}
+
+#leader-description{
+    flex-direction: column;
+    padding:0;
+    gap:0;
+
 }
 
