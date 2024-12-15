@@ -1,6 +1,4 @@
-*{
-    border: 1px solid blue;
-}
+
 a{
     text-decoration: none;
 }
@@ -40,7 +38,6 @@ a{
     height: 100%;
     padding: 1rem;
     z-index: 1;
-
 }
 
 #intro {
@@ -55,16 +52,27 @@ a{
 #header {
     position: absolute;
     top: 2rem;
-    left:3rem;
+    left: 3rem;
     width: calc(100% - 10rem);
     z-index: 3;
     padding: 1.5rem 2rem;
+
+}
+#intro {
+    font-size: 2rem;
+    font-family: "quasimoda", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #2537B7;
+    max-width: 60%;
+    max-height: 15rem;
 }
 
 #header nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #header nav ul {
@@ -75,6 +83,7 @@ a{
     padding: 0;
     flex: 1;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #header nav ul li a {

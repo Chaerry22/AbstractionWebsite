@@ -5,6 +5,7 @@ import { inject } from '@angular/core';
 import { ServicesService, Signup } from '../../app/services/firestore-services.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+
 // import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -32,6 +33,7 @@ export class SignupPageComponent {
 
   successMessage: string = '';
   errorMessage: string = '' 
+
 
   checkInputs() {
     if (this.newUser.email && this.newUser.firstname && this.newUser.lastname && this.newUser.grade){
@@ -61,3 +63,6 @@ export class SignupPageComponent {
     }
   }
 }
+
+
+

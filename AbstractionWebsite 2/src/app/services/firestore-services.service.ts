@@ -10,11 +10,6 @@ export interface Signup {
   grade: string;
 }
 
-export interface Login {
-  email: string;
-  password: string;
-}
-
 @Injectable({
   providedIn: 'root'
 })
@@ -51,4 +46,6 @@ export class ServicesService {
     // If email is unique, add the new user to Firestore
     await addDoc(this.signup, newUser);
   }
+
 }
+
