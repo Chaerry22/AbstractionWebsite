@@ -1,1 +1,69 @@
-<p>workshops works!</p>
+<head>
+    <link rel="stylesheet" href="https://use.typekit.net/wiz5trz.css">
+  </head>
+  
+  <div id="container">
+    <header id="header">
+      <nav>
+        <div id="logo">Abstraction</div>
+        <ul>
+            <li><a routerLink="/home-page">Home</a></li>
+            <li><a routerLink="/community-project">Projects</a></li>
+            <li><a routerLink="/workshops">Workshops</a></li>
+            <li><a routerLink="/leadership">Leadership</a></li>
+        </ul>
+        <div id="contact">
+          <a routerLink="/signup-page" id="contact-top">Sign Up</a>
+        </div>
+      </nav>
+    </header>
+    <main id="mainContent">
+      <p id="intro">Workshops are fun, hands-on sessions where you can learn new tech skills like web development, game design, and more. Led by students and faculty, they’re a great way to try something new and work on cool projects with others.</p>
+    </main>
+  </div>
+
+  <div id="card-container">
+      <img id="background" src="assets/EventDesign.png" alt="MainBackground" fetchpriority="high" />
+      <a href="/community-project">
+        <app-projects title="Web Development Workshop"
+          subtitle="Our web development workshop will teach you the fundamentals of building modern websites. Whether you're a beginner or looking to improve your skills, this workshop will help you gain practical experience in web development."
+          design="assets/card1design.png" professor="Samuel Ntadom" backgroundcolor="#FFE7CA"></app-projects>
+      </a>
+    
+      <a href="https://calvinhacks.org/">
+        <app-projects title="Game Development Workshop"
+          subtitle="Our Game Development workshop will teach you the basics of creating games using Unity. Whether you're a beginner or looking to improve your skills, this workshop will guide you through the process of building your own interactive games."
+          design="assets/card2design.png" professor="Jacob"  backgroundcolor="#E3EAFE"></app-projects>
+      </a>
+    
+      <a href="/workshops">
+        <app-projects title="Command Line Workshop"
+          subtitle="Our upcoming Command Line workshop will teach you the basics of navigating and using the command line interface. Learn essential commands and techniques to streamline your workflow and boost your development efficiency. "
+          design="assets/card1design.png"  professor="Coming Soon" backgroundcolor="#CDE0B6"></app-projects>
+      </a>
+
+
+  </div>
+
+  
+  <div class="footer-container">
+    <!-- <img id="Footer" src={Footer.src} alt="" fetchpriority="high" /> -->
+    <div id="footer-card-container">
+      <div id="footer-card">
+        <h2>Ready To Get Started?</h2>
+        <a routerLink="/signup-page" id="signup">Sign Up</a>
+      </div>
+      <div id="footer-card">
+        <h2>Get Involved</h2>
+        <li><a id="footer-list" href="">Community Projects</a></li>
+        <li><a id="footer-list" href="">Workshops</a></li>
+        <li><a id="footer-list" href="https://calvinhacks.org/">Hackathon</a></li>
+      </div>
+      <div id="footer-card">
+        <h2>Find Us</h2>
+        <li><a id="footer-list" href="https://www.instagram.com/calvinabstraction/">Instagram</a></li>
+        <li><a id="footer-list" href="">GitHub</a></li>
+        <p id="email">abstraction&#64;calvin.edu</p>
+      </div>
+    </div>
+  </div>

@@ -1,7 +1,5 @@
  /* General Styling */
- *{
-  border: 1px solid blue;
- }
+
 
  body {
     margin: 0;
@@ -72,7 +70,7 @@
 #propoganda {
   font-size: 1rem;
   font-family: "quasimoda", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   color: #2537B7;
   width: 50%;
@@ -82,6 +80,7 @@
   margin-bottom: 10rem;
   justify-content: center;
   box-sizing: border-box;
+  line-height: 1.5;
 }
 
 #mainContent {
@@ -158,7 +157,7 @@
   #header {
     position: absolute;
     top: 2rem;
-    left:3rem;
+
     width: calc(100% - 10rem);
     z-index: 6;
     padding: 1.5rem 2rem;
@@ -202,7 +201,8 @@
     font-style: normal;
     text-transform: uppercase;
     margin-right: auto;
-    padding-left: 3rem;
+    padding-left: 2rem;
+    padding-right: 3rem;
 }
 
 #contact {

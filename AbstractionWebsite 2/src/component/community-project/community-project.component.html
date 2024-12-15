@@ -7,9 +7,10 @@
       <nav>
         <div id="logo">Abstraction</div>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#leadership">Leadership</a></li>
+          <li><a routerLink="/home-page">Home</a></li>
+          <li><a routerLink="/community-project">Projects</a></li>
+          <li><a routerLink="/workshops">Workshops</a></li>
+          <li><a routerLink="/leadership">Leadership</a></li>
         </ul>
         <div id="contact">
           <a routerLink="/signup-page" id="contact-top">Sign Up</a>
@@ -17,9 +18,9 @@
       </nav>
     </header>
     <main id="mainContent">
-      <p id="intro">We introduce you to Abstraction’s 2024 - 2025
-        Leadership Team! Interested in joining? Make sure to contact 
-        one of the leaders about the opportunity!</p>
+      <p id="intro">Community projects are a new resource from Abstraction that connect Calvin CS students with real-world CS problems. 
+        These projects are led by professors and involve teams of four to five students, with at least one team leader who has technical expertise. 
+        It's a great opportunity to gain hands-on experience and contribute to meaningful projects.</p>
     </main>
   </div>
 
@@ -28,31 +29,31 @@
       <a href="/community-project">
         <app-projects title="Alumni Bot"
           subtitle="This project aims to establish a sustainable Calvin CS alumni network by leveraging social media platforms like LinkedIn, Facebook, and Instagram to gather contact information of past graduates."
-          design="assets/card1design.png" professor="Professor. Chang" backgroundcolor="#FFE7CA"></app-projects>
+          design="assets/card1design.png" professor="Mentor: Professor. Chang" backgroundcolor="#FFE7CA"></app-projects>
       </a>
     
       <a href="https://calvinhacks.org/">
         <app-projects title="AI Rewrite"
           subtitle="This project involves developing a mobile touch app for the rewrite-with-predictions feature, including both frontend and backend components. The app aims to enhance user experience with a touch-friendly interface, potentially leveraging an existing soft-keyboard implementation or starting fresh for optimal design."
-          design="assets/card2design.png" professor="Professor. Arnold"  backgroundcolor="#E3EAFE"></app-projects>
+          design="assets/card2design.png" professor="Mentor: Professor. Arnold"  backgroundcolor="#E3EAFE"></app-projects>
       </a>
     
       <a href="/workshops">
         <app-projects title="Game Creation"
           subtitle="This project partners with Kent District Library to offer workshops where participants learn to create games using tools like Fortnite Creative, Unreal Editor for Fortnite, and Unreal Engine. "
-          design="assets/card1design.png"  professor="Professor. Vanden Heuvel" backgroundcolor="#CDE0B6"></app-projects>
+          design="assets/card1design.png"  professor="Mentor: Professor. Vanden Heuvel" backgroundcolor="#CDE0B6"></app-projects>
       </a>
 
       <a href="/community-project">
         <app-projects title="Social Network"
           subtitle="This project involves developing a social network application where users' interactions are tracked and recorded. The data collected will be analyzed to study messaging patterns and the propagation of information through the network."
-          design="assets/card1design.png"  professor="Professor. Araujo" backgroundcolor="#FFE7CA"></app-projects>
+          design="assets/card1design.png"  professor="Mentor: Professor. Araujo" backgroundcolor="#FFE7CA"></app-projects>
       </a>
 
       <a href="https://calvinhacks.org/">
         <app-projects title="Moodle Palette"
           subtitle="This project focuses on updating Moodle to the latest version, integrating the TinyMCE editor alongside the Ace editor, and packaging the solution as a browser extension. It also involves unifying various separate scripts to streamline the user experience and improve functionality."
-          design="assets/card2design.png"  professor="Professor. Arnold" backgroundcolor="#E3EAFE"></app-projects>
+          design="assets/card2design.png"  professor="Mentor: Professor. Arnold" backgroundcolor="#E3EAFE"></app-projects>
       </a>
 
 
@@ -67,15 +68,15 @@
         <a routerLink="/signup-page" id="signup">Sign Up</a>
       </div>
       <div id="footer-card">
-        <h2>Stay Informed</h2>
-        <li><a id="footer-list" href="">Mailing List</a></li>
-        <li><a id="footer-list" href="">Instagram</a></li>
+        <h2>Get Involved</h2>
+        <li><a id="footer-list" routerLink="/community-project">Community Projects</a></li>
+        <li><a id="footer-list" routerLink="/workshops">Workshops</a></li>
       </div>
       <div id="footer-card">
         <h2>Find Us</h2>
         <li><a id="footer-list" href="https://www.instagram.com/calvinabstraction/">Instagram</a></li>
         <li><a id="footer-list" href="">GitHub</a></li>
-        <p id="email">abstraction(at)calvin.edu</p>
+        <p id="email">abstraction&#64;calvin.edu</p>
       </div>
     </div>
   </div>
