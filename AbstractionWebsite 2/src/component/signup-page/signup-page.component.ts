@@ -5,7 +5,7 @@ import { inject } from '@angular/core';
 import { ServicesService, Signup } from '../../app/services/firestore-services.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-// import { MatIconModule } from '@angular/material/icon';
+
 
 @Component({
     selector: 'app-signup-page',

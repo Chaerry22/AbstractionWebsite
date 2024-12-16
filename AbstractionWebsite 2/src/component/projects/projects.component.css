@@ -1,28 +1,31 @@
-
-
 #card-container {
     width: 100%;
     display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap to the next line */
-    justify-content: center; /* Center the cards when wrapping */
+    flex-wrap: wrap;
+    /* Allow cards to wrap to the next line */
+    justify-content: center;
+    /* Center the cards when wrapping */
     align-items: center;
     margin-top: 5rem;
     padding: 2rem;
     box-sizing: border-box;
-    gap: 2rem; /* Space between cards */
+    gap: 2rem;
+    /* Space between cards */
 }
 
 .card {
-    flex: 1 1 calc(30% - 2rem); /* Allow cards to resize and fit three per row */
+    flex: 1 1 calc(30% - 2rem);
+    /* Allow cards to resize and fit three per row */
     max-width: 350px;
-    aspect-ratio: 1 / 1; /* Let height adjust with content */
+    aspect-ratio: 1 / 1;
+    /* Let height adjust with content */
     border-radius: 50px;
     background-color: #f0f0f0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 2rem;
+    padding: 3rem;
     position: relative;
     text-decoration: none;
     transition: transform 0.15s ease-in-out;
@@ -35,7 +38,8 @@
     margin: 0;
     transform: translate(10%, 10%);
     z-index: 1;
-    width: 70%; /* Make image size responsive */
+    width: 70%;
+    /* Make image size responsive */
     height: auto;
 }
 
@@ -60,31 +64,38 @@ h2 {
     color: #5E5E5E;
 }
 
-#learnmore{
-    margin-top: 2rem;
+#professor {
+    margin-top: auto; /* Pushes it to the bottom */
     color: #2537B7;
     font-family: "quasimoda", sans-serif;
     font-weight: 500;
     font-size: 20px;
-    padding-top:1rem;
-    }
-    
-    .learnmore-container {
-    display: flex; /* Enables flexbox layout */
-    align-items: center; /* Vertically centers items */
-    gap: 0.5rem; 
-    margin-top: -1rem;
+    text-align: left; /* Align to the left */
+    padding-top: 1rem;
+    z-index: 1;
+}
+
+
+.learnmore-container {
+    display: flex;
+    /* Enables flexbox layout */
+    flex-direction: column;
+    align-items: start;
+    margin-top: auto;
     height: 25px;
-    }
+}
 
 /* Media Queries for Smaller Screens */
 @media (max-width: 1024px) {
     #card-container {
-        justify-content: space-around; /* Spread cards evenly */
+        justify-content: space-around;
+        /* Spread cards evenly */
         gap: 1rem;
     }
+
     .card {
-        flex: 1 1 calc(45% - 2rem) /* Two cards per row */
+        flex: 1 1 calc(45% - 2rem)
+            /* Two cards per row */
     }
 }
 
@@ -92,33 +103,24 @@ h2 {
     #card-container {
         padding: 1rem;
     }
+
     .card {
-        flex: 1 1 100%; /* One card per row */
+        flex: 1 1 100%;
+        /* One card per row */
     }
+
     .card img {
         width: 60%;
     }
 }
 
-#card1design {
+#carddesign {
     position: absolute;
     bottom: 22px;
     right: 29px;
     margin: 0;
     transform: translate(10%, 10%);
-    z-index: 1;
+    z-index: 0;
     width: 300px;
     height: auto;
 }
-
-#card2design {
-    position: absolute;
-    bottom: 19px;
-    right: 20px;
-    margin: 0;
-    transform: translate(10%, 10%);
-    z-index: 1;
-    width: 220px;
-    height: auto;
-}
-

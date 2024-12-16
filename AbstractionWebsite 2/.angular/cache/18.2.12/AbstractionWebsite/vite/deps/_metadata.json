@@ -1,49 +1,49 @@
 {
-  "hash": "c783d400",
-  "configHash": "22079477",
+  "hash": "2c73ef65",
+  "configHash": "7d311659",
   "lockfileHash": "589c48b7",
-  "browserHash": "101428fc",
+  "browserHash": "cdaa7420",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "946c78db",
+      "fileHash": "3b02c592",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "c46e4f9b",
+      "fileHash": "aa1a2cf5",
       "needsInterop": false
     },
     "@angular/fire/app": {
       "src": "../../../../../../node_modules/@angular/fire/fesm2022/angular-fire-app.mjs",
       "file": "@angular_fire_app.js",
-      "fileHash": "50e740f7",
+      "fileHash": "18578e10",
       "needsInterop": false
     },
     "@angular/fire/firestore": {
       "src": "../../../../../../node_modules/@angular/fire/fesm2022/angular-fire-firestore.mjs",
       "file": "@angular_fire_firestore.js",
-      "fileHash": "804f07e8",
+      "fileHash": "3122d9b1",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "0e050d26",
+      "fileHash": "204e687a",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "66b162b8",
+      "fileHash": "c750002d",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "b4f76d06",
+      "fileHash": "88f8dcd8",
       "needsInterop": false
     }
   },
