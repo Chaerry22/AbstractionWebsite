@@ -27145,6 +27145,7 @@ export {
   __objRest,
   __superGet,
   __async,
+  SIGNAL,
   __rest,
   Subscription,
   pipe,
@@ -27189,7 +27190,6 @@ export {
   switchMap,
   takeUntil,
   tap,
-  SIGNAL,
   XSS_SECURITY_URL,
   RuntimeError,
   formatRuntimeError,
@@ -27702,4 +27702,4 @@ export {
    * found in the LICENSE file at https://angular.dev/license
    *)
 */
-//# sourceMappingURL=chunk-LFSWDQYP.js.map
+//# sourceMappingURL=chunk-WEJIWTFT.js.map
