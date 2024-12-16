@@ -104,6 +104,14 @@
     display: flex;
     margin-top: 80%;
   }
+  #header nav ul li a{
+    display: none;
+  }
+}
+@media (max-width: 1300px) {
+#header nav ul li a{
+  display: none;
+}
 }
 
 
@@ -190,10 +198,9 @@
 #header {
     position: absolute;
     top: 2rem;
-
-    width: calc(100% - 10rem);
+    width: calc(95%);
     z-index: 6;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1rem;
 }
 
 #header nav {
@@ -235,7 +242,7 @@
     text-transform: uppercase;
     margin-right: auto;
     padding-left: 2rem;
-    padding-right: 3rem;
+    padding-right: 2rem;
 }
 
 #contact {

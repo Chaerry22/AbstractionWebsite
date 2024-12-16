@@ -18,4 +18,6 @@ export class HomePageComponentComponent {
 navigateToSignUp() {
     this.router.navigate(['/signup-page']);
 } 
+
+
 }

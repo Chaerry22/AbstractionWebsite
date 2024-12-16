@@ -121,6 +121,7 @@ a{
     padding:0.5rem 2rem;
     border-radius: 40px;
     margin-right:2rem;
+    border: 1px solid blue;
 }
 
 #contact-top:hover {
@@ -153,7 +154,7 @@ a{
     font-style: normal;
     color: #2537B7;
     max-width: 60%;
-    border: 1px solid blue;
+    
 }
 
 
